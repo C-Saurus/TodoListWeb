@@ -1,0 +1,79 @@
+.todoItem{
+    width: 180px;
+    height: 20px;
+    font-size: 16px;
+    align-items: center;
+}
+
+.todoList{
+    display: flex;
+    font-size: 20px;
+    color: greenyellow;
+    align-items: center;
+    border-top: 1px solid wheat;
+    border-bottom: 1px solid wheat;
+    box-sizing:border-box;
+    padding: 10px 0px;
+}
+
+* li {
+    list-style: none;
+}
+
+.item {
+    display: flex;
+    border-bottom: 1px solid wheat;
+}
+
+.base {
+    display: flex;
+    width: 100%;
+}
+
+.input {
+    width: 200px;
+    height: 30px;
+    padding-right: 10px;
+}
+
+.label {
+    font-size: 20px;
+    padding: 0px 10px;
+    color: yellowgreen;
+}
+
+.add {
+    margin-left: 10px;
+    height: 34px;
+    width: 80px;
+    border: 1px solid yellowgreen;
+    cursor: pointer;
+}
+
+.inputBase {
+    margin: 20px 100px;
+    align-items: center;
+    display: block;
+}
+
+.listItem {
+    
+    border-left: 1px solid wheat;
+    border-right: 1px solid wheat;
+    width: 50%;
+    padding-left: 0px;
+    margin-left: 10px;
+}
+
+.todoItemDel {
+    width: 40px;
+    margin: 2px 55px;
+    height: 20px;
+    color: black;
+    align-items: center;
+    cursor: pointer;
+}
+
+.todoItemDel:hover {
+    background-color: red;
+}
