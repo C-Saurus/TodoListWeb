@@ -1,41 +1,30 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import axiosinstance from './api/axiosinstance';
 import './App.css';
 import TodoList from './Components/TodoList';
 function App() {
-  const [work, setWork] = useState('')
-  // const [value, setValue] = useState([
-  //   {
-  //     id: 0,
-  //     name: "Learning",
-  //     isDone: false
-  //   },
-  //   {
-  //     id: 1,
-  //     name: "Coding",
-  //     isDone: false
-  //   },
-  //   {
-  //     id: 2,
-  //     name: "Cooking",
-  //     isDone: false
-  //   },
-  //   {
-  //     id: 3,
-  //     name: "Sleeping",
-  //     isDone: false
-  //   },
-  //   {
-  //     id: 4,
-  //     name: "Eating",
-  //     isDone: false
-  //   }
-  // ])
-  const [value, setValue] = useState(JSON.parse(localStorage.getItem('work')) || [])
+  const [work, setWork] = useState('');
+  const [listTd, setListTd] = useState([]);
+  useEffect(() => {
+    const fetchList = async () => {
+      try {
+        const url = "/userResource";
+        const response = await axiosinstance.get(url);
+        setListTd(response.data);
+      } catch (error) {
+        console.log("Error: ", error);
+      }
+    }
+
+    fetchList()
+  }, [])
+
+
   return (
     <div className="App">
       <header className="App-header">
         <div className="title">Daily Work</div>
-        <TodoList value={value} setValue={setValue} work={work} setWork={setWork}/>
+        <TodoList listTd={listTd} setListTd={setListTd} work={work} setWork={setWork}/>
       </header>
     </div>
   );
