@@ -1,31 +1,26 @@
-import { useEffect, useState } from 'react';
-import axiosinstance from './api/axiosinstance';
 import './App.css';
-import TodoList from './Components/TodoList';
+import { Routes, Route, Link } from 'react-router-dom'
+import Home from './pages/Home'
+import ListDone from './pages/ListDone'
+import AddTodo from './pages/AddTodo';
+import EditTodo from './pages/EditTodo'
 function App() {
-  const [work, setWork] = useState('');
-  const [listTd, setListTd] = useState([]);
-  useEffect(() => {
-    const fetchList = async () => {
-      try {
-        const url = "/userResource";
-        const response = await axiosinstance.get(url);
-        setListTd(response.data);
-      } catch (error) {
-        console.log("Error: ", error);
-      }
-    }
-
-    fetchList()
-  }, [])
-
 
   return (
     <div className="App">
-      <header className="App-header">
-        <div className="title">Daily Work</div>
-        <TodoList listTd={listTd} setListTd={setListTd} work={work} setWork={setWork}/>
+      <header>
+        <div className='title-name'>🙉🙉 Hoàn thành công việc trong ngày nào 🙉🙉</div>
       </header>
+      <nav className='navBar'>
+        <Link to='/'>Home</Link>
+        <Link to='/listdone'>ListDone</Link>
+      </nav>
+      <Routes>
+        <Route path='/' element={<Home />} ></Route>
+        <Route path='/listdone' element={<ListDone />} ></Route>
+        <Route path='/add' element={<AddTodo />} ></Route>
+        <Route path='/edit' element={<EditTodo />} ></Route>
+      </Routes>
     </div>
   );
 }

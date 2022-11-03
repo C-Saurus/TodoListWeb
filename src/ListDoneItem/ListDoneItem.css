@@ -11,10 +11,8 @@
     font-size: 20px;
     color: greenyellow;
     align-items: center;
-    border-top: 1px solid green;
-    border-bottom: 1px solid green;
-    box-sizing:border-box;
-    padding: 10px 0px;
+    
+    margin: 10px 0px;
     
 }
 
@@ -46,7 +44,8 @@
 
 .base {
     display: flex;
-    width: 100%;
+    margin-left: 10rem;
+    margin-right: 10rem;
 }
 
 .input {
@@ -80,28 +79,38 @@
     
     border-left: 1px solid wheat;
     border-right: 1px solid wheat;
-    width: 50%;
+    width: 100%;
     padding-left: 0px;
     margin-left: 10px;
 }
 
 .todoItemDel {
-    width: 40px;
-    margin-top: 2px;
-    margin-right: 0px; 
-    height: 20px;
-    color: black;
-    align-items: center;
+    font-size: 0.8rem;
+    padding: .6rem 1rem;
+    color: #fff;
+    font-weight: 100;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    border-radius: .25rem;
+    transition: color .15s;
+    background-color: #02fad1;
+    border: aqua;
     cursor: pointer;
 }
 
 .todoItemRename {
-    width: 40px;
-    margin-top: 2px;
-    margin-left: 0px; 
-    height: 20px;
-    color: black;
-    align-items: center;
+    font-size: 0.8rem;
+    padding: .6rem 1rem;
+    color: #fff;
+    font-weight: 100;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    border-radius: .25rem;
+    transition: color .15s;
+    background-color: #ffcd07;
+    border: aqua;
     cursor: pointer;
 }
 

@@ -1,0 +1,88 @@
+.todoList {
+    font-size: 1.5rem;
+    width: 100%;
+    margin-top: 5rem;
+    align-items: center;
+    border-top: 1px solid green;
+    border-bottom: 1px solid green;
+    box-sizing: border-box;
+    padding: 10px 0px;
+}
+
+.todoList-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.table {
+    background-color: bisque; 
+    color: rgb(17, 17, 17); 
+    border-color: rgb(170, 170, 170);
+    border-collapse: collapse;
+}
+
+.table-head{
+    width: 100%;
+    display: table-row;
+    vertical-align: inherit;
+    
+}
+
+.table-item {
+    padding-left: 4px;
+    padding-right: 4px;
+    display: table-row;
+    vertical-align: inherit;
+}
+
+.del-btn {
+    font-size: 1.2rem;
+    padding: .6rem 1rem;
+    color: #fff;
+    font-weight: 100;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    border-radius: .25rem;
+    transition: color .15s;
+    background-color: #02fad1;
+    border: aqua;
+    cursor: pointer;
+}
+
+.save-btn {
+    font-size: 1.2rem;
+    padding: .6rem 1rem;
+    color: #fff;
+    font-weight: 100;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    border-radius: .25rem;
+    transition: color .15s;
+    background-color: #45f804;
+    border: aqua;
+    cursor: pointer;
+}
+
+.edit-btn {
+    font-size: 1.2rem;
+    padding: .6rem 1rem;
+    color: #fff;
+    font-weight: 100;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    border-radius: .25rem;
+    transition: color .15s;
+    background-color: #ffcd07;
+    border: aqua;
+    cursor: pointer;
+}
+
+.done {
+    font-size: 1.2rem;
+    color: #3b642c;
+}

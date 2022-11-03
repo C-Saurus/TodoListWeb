@@ -1,25 +1,31 @@
 .App {
+  margin: 0;
+  padding-top: 2rem;
   text-align: center;
-}
-
-.App-header {
-  background-color: #282c34;
+  background-color: bisque;
   min-height: 100vh;
-  display: block;
-  align-items: center;
-  font-size: calc(40px);
-  color: white;
-  top: 20px;
-  
 }
 
-.title {
-  color: yellow;
-  border: 1px solid wheat;
-  background-color: blueviolet;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  display: block;
+.navBar {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
 }
+
+.navBar > * {
+  font-size: 1.4rem;
+  margin-left: 2rem;
+  color: black;
+  text-decoration: none;
+  transition: 200ms ease-in-out;
+}
+
+.navBar > *:hover {
+  color: aqua;
+}
+
+.title-name {
+  font-size: 1.4rem;
+}
+
 
